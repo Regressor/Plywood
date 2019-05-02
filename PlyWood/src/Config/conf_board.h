@@ -38,7 +38,7 @@
 
 /* Лимиты вводимых пользователем значений */
 #define MAX_COMMAND_LEN			32				// Максимальная длина команды в байтах (можно уменьшить, если убрать дамп)
-#define DEFAULT_AMPERAGE		10				// Ток по умолчанию в амперах
+#define DEFAULT_AMPERAGE		5				// Ток по умолчанию в амперах
 #define DEFAULT_AC_FREQUENCY	200				// Частота AC по умолчанию в герцах
 #define DEFAULT_AC_BALANCE		20				// Баланс AC по умолчанию в процентах
 
