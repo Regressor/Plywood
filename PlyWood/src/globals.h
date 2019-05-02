@@ -37,7 +37,6 @@ extern int ENAmperageSet;
 
 extern int PropFactor;
 extern int DiffFactor;
-extern int IntgFactor;
 extern int Pid;
 
 extern unsigned char ActiveMode;
