@@ -37,11 +37,12 @@ extern int ENAmperageSet;
 
 extern int PropFactor;
 extern int DiffFactor;
+extern int LastError;
 extern int Pid;
 
 extern unsigned char ActiveMode;
 
-extern bool PWMActive;
+extern bool PWMSoftStart;
 extern bool ACActive;
 extern bool DCRPolarity;
 extern bool PartPlusActive;

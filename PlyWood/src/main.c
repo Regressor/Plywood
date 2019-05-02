@@ -9,11 +9,11 @@ void default_vars_settings(void);
 void default_vars_settings(void) {
 	FanManualSwitch = false;
 	ActiveMode = MODE_NONE;
-	PWMActive = false;
+	PWMSoftStart = false;
 	ACActive = false;
 	
-	ENAmperageSet = HallZero - DEFAULT_AMPERAGE * 2;
-	EPAmperageSet = HallZero + DEFAULT_AMPERAGE * 2;
+	ENAmperageSet = HallZero + DEFAULT_AMPERAGE * 2;
+	EPAmperageSet = HallZero - DEFAULT_AMPERAGE * 2;
 
 	ACPeriodCounter = 10000 / DEFAULT_AC_FREQUENCY;
 	ACEPCounter = ACPeriodCounter * DEFAULT_AC_BALANCE / 100;

@@ -30,13 +30,14 @@ int TargetAmpEP = 0;					// Уставка тока для положительного включения
 int EPAmperageSet = 0;					// Задание тока положительного плеча (исп. в прерывании)
 int ENAmperageSet = 0;					// Задание тока отрицательного плеча (исп. в прерывании)
 
-int PropFactor = 0;					// Пропорциональный коэффициент PID регулятора
-int DiffFactor = 0;					// Дифференциальный коэффициент PID регулятора
-int Pid = 0;						// Значение PID регулятора
+int PropFactor = 0;						// Пропорциональный коэффициент PID регулятора
+int DiffFactor = 0;						// Дифференциальный коэффициент PID регулятора
+int LastError = 0;						// Предыдущая ошибка pid регулятора
+int Pid = 0;							// Значение PID регулятора
 
 unsigned char ActiveMode = MODE_DCTIG;		// Текущий режим работы (AC/DC)
 
-bool PWMActive = false;					// true - ШИМ включен, false - ШИМ выключен
+bool PWMSoftStart = false;					// true - ШИМ включен, false - ШИМ выключен
 bool ACActive = false;					// true - переменный ток, false - постоянный ток
 bool DCRPolarity = false;				// Полярность постоянного тока (true - EN, false - EP)
 bool PartPlusActive = true;				// true - включен плюс на детали

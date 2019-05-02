@@ -12,7 +12,7 @@ NOINLINE void pwm_start(void) {
 	temp &= (1 << PRUN1);
 	PCTL1 = temp;
 	if (temp == 0) {
-		PWMActive = true;
+		PWMSoftStart = true;
 		
 		/* «ададим максимальную длительность паузы */
 		PWMDownStart = PWM_MAX_DOWN_COUNTER;
@@ -38,7 +38,7 @@ NOINLINE void pwm_shutdown(void) {
 	PCTL1 = temp;
 
 	if (temp != 0) {
-		PWMActive = false;
+		PWMSoftStart = false;
 		PCTL1 &= (~(1 << PRUN1));
 	}
 }
